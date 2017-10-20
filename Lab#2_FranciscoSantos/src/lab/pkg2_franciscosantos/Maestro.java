@@ -5,6 +5,8 @@
  */
 package lab.pkg2_franciscosantos;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Francisco Santos
@@ -16,8 +18,13 @@ public class Maestro {
     private int salario;
     private String usuario;
     private String contraseña;
+    ArrayList<String> clase = new ArrayList();
 
     public Maestro() {
+    }
+
+    public Maestro(String nombre) {
+        this.nombre = nombre;
     }
 
     public Maestro(String nombre, String titulo, String maestria, int salario, String usuario, String contraseña) {
@@ -75,6 +82,14 @@ public class Maestro {
 
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
+    }
+
+    public ArrayList<String> getClase() {
+        return clase;
+    }
+
+    public void setClase(ArrayList<String> clase) {
+        this.clase = clase;
     }
 
     @Override

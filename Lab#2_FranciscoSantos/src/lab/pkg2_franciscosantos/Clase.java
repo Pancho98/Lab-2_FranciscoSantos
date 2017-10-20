@@ -17,18 +17,23 @@ public class Clase {
     private int max;
     private String maestro;
     private int uv;
-    ArrayList<Alumno> lista = new ArrayList();
+    private int precio;
+    ArrayList<Maestro> Maestros = new ArrayList();
+    ArrayList<Alumno> Alumnos = new ArrayList();
 
     public Clase() {
     }
 
-    public Clase(String nombre, String seccion, int max, String maestro, int uv) {
+    public Clase(String nombre, String seccion, int max, String maestro, int uv, int precio) {
         this.nombre = nombre;
         this.seccion = seccion;
         this.max = max;
         this.maestro = maestro;
         this.uv = uv;
+        this.precio = precio;
     }
+
+    
 
     public String getNombre() {
         return nombre;
@@ -70,12 +75,28 @@ public class Clase {
         this.uv = uv;
     }
 
-    public ArrayList<Alumno> getLista() {
-        return lista;
+    public ArrayList<Alumno> getAlumnos() {
+        return Alumnos;
     }
 
-    public void setLista(ArrayList<Alumno> lista) {
-        this.lista = lista;
+    public void setAlumno(ArrayList<Alumno> lista) {
+        this.Alumnos = lista;
+    }
+
+    public ArrayList<Maestro> getMaestros() {
+        return Maestros;
+    }
+
+    public void setMaestros(ArrayList<Maestro> listaM) {
+        this.Maestros = listaM;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
     }
 
     @Override

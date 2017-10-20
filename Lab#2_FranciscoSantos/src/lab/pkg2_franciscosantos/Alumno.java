@@ -5,6 +5,8 @@
  */
 package lab.pkg2_franciscosantos;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Francisco Santos
@@ -17,6 +19,7 @@ public class Alumno {
     private int dinero;
     private String usuario;
     private String contraseña;
+    ArrayList<Clase> lista = new ArrayList();
 
     public Alumno() {
     }
@@ -33,6 +36,7 @@ public class Alumno {
         this.dinero = dinero;
         this.usuario = usuario;
         this.contraseña = contraseña;
+        
     }
 
     public String getNombre() {
@@ -89,6 +93,14 @@ public class Alumno {
 
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
+    }
+
+    public ArrayList<Clase> getLista() {
+        return lista;
+    }
+
+    public void setLista(ArrayList<Clase> lista) {
+        this.lista = lista;
     }
 
     @Override
