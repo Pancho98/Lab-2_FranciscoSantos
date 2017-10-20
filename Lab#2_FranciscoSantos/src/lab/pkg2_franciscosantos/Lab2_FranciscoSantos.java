@@ -17,9 +17,8 @@ public class Lab2_FranciscoSantos {
         ArrayList<String>secciones= new ArrayList();
         while (resp.equals("s") || resp.equals("S")) {            
             System.out.println("1. Administracion\n"
-                    + "2. Matricula\n"
-                    + "3. Log in\n"
-                    + "4. Salir");
+                    + "2. Log in\n"
+                    + "3. Salir");
             int opc = sc.nextInt();
             
             switch(opc){
@@ -27,7 +26,7 @@ public class Lab2_FranciscoSantos {
                     String resp2="s";
                     while (resp.equals("s") || resp.equals("S")) { 
                     System.out.println("a. Crear Clase\n"
-                            + "b. Resgistrar Maestro\n+"
+                            + "b. Resgistrar Maestro\n"
                             + "c. Registar Alumno\n"
                             + "d. Salir");
                     String opc2=sc.next();
@@ -48,7 +47,7 @@ public class Lab2_FranciscoSantos {
                             int precio=sc.nextInt();
                             Clase cl=new Clase(nombrec, seccion, max, maestro, uv, precio);
                             clases.add(cl);
-                            secciones.add(seccion);
+                            secciones.add(resp);
                             break;
                         case "b":
                             System.out.println("Ingrese nombre del docente");
@@ -67,6 +66,22 @@ public class Lab2_FranciscoSantos {
                             maestros.add(mae);
                             break;
                         case "c":
+                            System.out.println("Ingrese nombre del alumno");
+                            String nombrea=sc.next();
+                            System.out.println("Ingresar numero de cuenta");
+                            int cuenta=sc.nextInt();
+                            System.out.println("Ingresar carrera");
+                            String carrera=sc.next();
+                            System.out.println("Ingrese edad");
+                            int edad=sc.nextInt();
+                            System.out.println("Ingresar dinero disponible");
+                            int dinero=sc.nextInt();
+                            System.out.println("Ingrese el usuario ");
+                            String user2=sc.next();
+                            System.out.println("Ingrese Contraseña");
+                            String contra2=sc.next();
+                            Alumno al = new Alumno(nombrea, cuenta, carrera, edad, dinero, user2, contra2);
+                            alumnos.add(al);
                             
                             break;
                         case "d":
@@ -80,9 +95,6 @@ public class Lab2_FranciscoSantos {
                     
                     break;
                 case 3:
-                    
-                    break;
-                case 4:
                     resp="n";
                     break;
             }
