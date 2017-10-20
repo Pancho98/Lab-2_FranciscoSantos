@@ -173,7 +173,20 @@ public class Lab2_FranciscoSantos {
 
                                                 break;
                                             case "b":
-
+                                                for (int x = 0; x < maestros.size(); x++) {
+                                                    for (int j = 0; j < clases.size(); j++) {
+                                                        if (maestros.get(x).getClase().get(x).equals(clases.get(j).getSeccion())) {
+                                                            System.out.println(j+""+clases.get(j).toString());
+                                                        }
+                                                    }
+                                                }
+                                                for (int w = 0; w < maestros.size(); w++) {
+                                                    for (int z = 0; z < alumnos.size(); z++) {
+                                                        if (maestros.get(w).getClase().get(w).equals(alumnos.get(z).getLista().get(z))) {
+                                                            System.out.println("Nombre= "+alumnos.get(z).getNombre()+" Cuenta= "+alumnos.get(z).getCuenta());
+                                                        }
+                                                    }
+                                                }
                                                 break;
                                         }
                                     } else {
