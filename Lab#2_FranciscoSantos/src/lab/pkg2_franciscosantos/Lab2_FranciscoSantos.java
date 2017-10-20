@@ -81,7 +81,7 @@ public class Lab2_FranciscoSantos {
                                             if (clases.get(i).getSeccion().equals(secc2)) {
                                                 secciones.add(secc2);
                                             }
-                                            System.out.println("Desea Matricular otra [s/n]");
+                                            System.out.println("Desea impartir otra clase otra [s/n]");
                                             des2 = sc.next().toLowerCase();
                                         }
                                     }
