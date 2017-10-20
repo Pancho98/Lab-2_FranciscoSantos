@@ -69,7 +69,24 @@ public class Lab2_FranciscoSantos {
                                 String contra = sc.next();
                                 Maestro maes = new Maestro(nombrem, titulo, meastria, salario, user, contra);
                                 maestros.add(maes);
-
+                                for (int i = 0; i < clases.size(); i++) {
+                                    System.out.println(i + "-" + clases.get(i).toString());
+                                }
+                                String des2 = "s";
+                                for (int i = 0; i < maestros.size(); i++) {
+                                    if (maestros.get(i).getNombre().equals(nombrem)) {
+                                        while (des2.equals("s")) {
+                                            System.out.println("Ingrese seccion de la clase que impartira");
+                                            String secc2 = sc.next();
+                                            if (clases.get(i).getSeccion().equals(secc2)) {
+                                                secciones.add(secc2);
+                                            }
+                                            System.out.println("Desea Matricular otra [s/n]");
+                                            des2 = sc.next().toLowerCase();
+                                        }
+                                    }
+                                    maestros.get(i).setClase(secciones);
+                                }
                                 break;
 
                             case "c":
@@ -108,7 +125,7 @@ public class Lab2_FranciscoSantos {
                                     seccionesAl.add(secc);
                                 }
                                 System.out.println("Desea Matricular otra [s/n]");
-                                des=sc.next();
+                                des = sc.next().toLowerCase();
                             }
                         }
                         alumnos.get(i).setLista(seccionesAl);
