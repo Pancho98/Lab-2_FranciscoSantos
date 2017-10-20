@@ -19,7 +19,7 @@ public class Alumno {
     private int dinero;
     private String usuario;
     private String contraseña;
-    ArrayList<Clase> lista = new ArrayList();
+    ArrayList<String> lista = new ArrayList();
 
     public Alumno() {
     }
@@ -95,11 +95,11 @@ public class Alumno {
         this.contraseña = contraseña;
     }
 
-    public ArrayList<Clase> getLista() {
+    public ArrayList<String> getLista() {
         return lista;
     }
 
-    public void setLista(ArrayList<Clase> lista) {
+    public void setLista(ArrayList<String> lista) {
         this.lista = lista;
     }
 

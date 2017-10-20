@@ -101,7 +101,7 @@ public class Clase {
 
     @Override
     public String toString() {
-        return "Clase" + "nombre=" + nombre;
+        return "Clase" + "nombre=" + nombre+" Seccion="+seccion;
     }
     
     
